@@ -108,6 +108,11 @@ class EncodingController extends Controller
             ], 400)->send();
 		}
 		
+		if ($request->has('download')) {
+            return response()
+                ->download( $tmpPath, Str::random(40) .'.'. $request->input('output') );
+        }
+        
 		# Return QR image
 		return response()->file( $tmpPath );
 

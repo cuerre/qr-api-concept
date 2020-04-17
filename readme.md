@@ -124,6 +124,9 @@ Laravel documentation explains to use the app
     this setting is set to PNG. Use vector choice just when needed for graphical design
     environments. Use upper case for this parameter.
     
+  * **download** (optional)
+    Force the generated file to be downloaded
+    
   ```
   **example**
   GET /api/encode?data=http://myweb.com&output=PNG
